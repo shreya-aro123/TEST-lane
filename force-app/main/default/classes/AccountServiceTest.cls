@@ -3,13 +3,9 @@ private class AccountServiceTest {
 
     @IsTest
     static void testCreateAccount() {
-        Test.startTest();
-
         Account acc = AccountService.createAccount(
             'QA Test Account'
         );
-
-        Test.stopTest();
 
         System.assertNotEquals(
             null,
@@ -31,22 +27,61 @@ private class AccountServiceTest {
         );
         insert acc;
 
-        Test.startTest();
-
         Account result = AccountService.getAccount(acc.Id);
-
-        Test.stopTest();
 
         System.assertEquals(
             acc.Id,
             result.Id,
-            'The returned Account ID should match'
+            'Account ID should match'
         );
 
         System.assertEquals(
             'Existing QA Account',
             result.Name,
-            'The returned Account name should match'
+            'Account name should match'
+        );
+    }
+
+    @IsTest
+    static void testUpdateAccountPhone() {
+        Account acc = new Account(
+            Name = 'QA Phone Update Test',
+            Phone = '1111111111'
+        );
+        insert acc;
+
+        Test.startTest();
+
+        Account updatedAccount =
+            AccountService.updateAccountPhone(
+                acc.Id,
+                '9876543210'
+            );
+
+        Test.stopTest();
+
+        System.assertEquals(
+            acc.Id,
+            updatedAccount.Id,
+            'Account ID should remain the same'
+        );
+
+        System.assertEquals(
+            '9876543210',
+            updatedAccount.Phone,
+            'Account phone should be updated successfully'
+        );
+
+        Account savedAccount = [
+            SELECT Phone
+            FROM Account
+            WHERE Id = :acc.Id
+        ];
+
+        System.assertEquals(
+            '9876543210',
+            savedAccount.Phone,
+            'Updated phone should be saved in the database'
         );
     }
 }
