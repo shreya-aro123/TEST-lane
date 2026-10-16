@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Sets Requires Review to true when a record is marked Complete.</description>
+    <environments>Default</environments>
+    <interviewLabel>Set Review Required When Complete</interviewLabel>
+    <label>Set Review Required When Complete</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Mark_Review_Required</name>
+        <label>Mark Review Required</label>
+        <locationX>176</locationX>
+        <locationY>286</locationY>
+        <inputAssignments>
+            <field>Requires_Review__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Mark_Review_Required</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Complete</stringValue>
+            </value>
+        </filters>
+        <object>DumpIt_Dependency_Record__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
