@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ESW_GV_Service_Agent_1790791918511</label>
+    <site>
+        <urlPathPrefix>ESWGVServiceAgent1790791918511</urlPathPrefix>
+    </site>
+    <space>site/ESW_GV_Service_Agent_17907919185111</space>
+</DigitalExperienceConfig>
