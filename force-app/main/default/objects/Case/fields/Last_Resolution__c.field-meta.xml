@@ -13,7 +13,7 @@
             <sorted>false</sorted>
             <value>
                 <fullName>Complaint</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Complaint</label>
             </value>
             <value>
@@ -22,9 +22,9 @@
                 <label>Warning</label>
             </value>
             <value>
-                <fullName>Voilated</fullName>
+                <fullName>Violated</fullName>
                 <default>false</default>
-                <label>Voilated</label>
+                <label>Violated</label>
             </value>
         </valueSetDefinition>
     </valueSet>
