@@ -21,6 +21,16 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>update_first_reso_to_violated</fullName>
+        <field>First_Resolution__c</field>
+        <literalValue>Violated</literalValue>
+        <name>update first reso to violated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>update_first_resolution</fullName>
         <field>First_Resolution__c</field>
         <literalValue>Warning</literalValue>
@@ -35,6 +45,26 @@
         <field>Last_Resolution__c</field>
         <literalValue>Warning</literalValue>
         <name>update last reso</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_last_reso_to_warning</fullName>
+        <field>Last_Resolution__c</field>
+        <literalValue>Warning</literalValue>
+        <name>update last reso to warning</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_status_to_violated</fullName>
+        <field>Last_Resolution__c</field>
+        <literalValue>Violated</literalValue>
+        <name>update status to violated</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
