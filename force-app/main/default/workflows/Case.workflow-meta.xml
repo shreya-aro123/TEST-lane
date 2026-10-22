@@ -11,6 +11,16 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>update_first_res</fullName>
+        <field>First_Resolution__c</field>
+        <literalValue>Violated</literalValue>
+        <name>update first res</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>update_first_reso_to_violated</fullName>
         <field>First_Resolution__c</field>
         <literalValue>Violated</literalValue>
@@ -25,6 +35,16 @@
         <field>First_Resolution__c</field>
         <literalValue>Warning</literalValue>
         <name>update first resolution</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_last_reso</fullName>
+        <field>Last_Resolution__c</field>
+        <literalValue>Warning</literalValue>
+        <name>update last reso</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
