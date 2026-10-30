@@ -95,10 +95,6 @@
                 <behavior>Readonly</behavior>
                 <field>Case_Priority_Text__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Case_Age__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
